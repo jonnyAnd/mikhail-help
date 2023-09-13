@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <head>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+
   <title>shortened image name Mikhail</title>
-  <style>
-        header, article, nav, aside, figure, figcaption, section, footer, ul, li, p, h1, h2, h3, h4 {
-            display: block;
-            outline: 2px solid red;
-            background: rgba(220, 150, 150, .2);
-            margin: 3px;
-            padding: 3px;
-            border: 1px solid #ddd; 
-            border-radius: 4px;
-            padding: 5px;
-            width: 150px;
-  }
-  </style>
-</head>
+
 <body>
-  <nav>
+
+  <div class="title">
+    <h1 id="pageTitle"> </h1>
+  </div>
+
+  <div class="mainimage">
+    <img id="mainImage" src="./img/test1.png">
+  </div>
+
+
+
+  <!-- Small Thumbnails  for your information   -->
+  <div>
     <ul>
       <li>
-        <h1>daymoon</h1><a href="../img/day-moon50.jpg"><img src="../img/day-moon1000.jpg" style="width:1000px;height:1000px;" alt="day-moon1000"></a>
-        <figcaption>
-          blue sky with small moon located in top light side
-        </figcaption>
-        <h1>masks</h1>
-        <figure>
-          <a href="../img/mexican-masks50.jpg"><img src="../img/mexican-masks1000.jpg" style="width:1000px;height:1000px;" alt="mexican-masks1000"></a>
-          <figcaption>
-            collection of mexican masks in a storage area
-          </figcaption>
-        </figure>
-        <h1>neon</h1>
-        <figure>
-          <a href="../img/neon-letters50.jpg"><img src="../img/neon-letters1000.jpg" style="width:1000px;height:1000px;" alt="neon-letters1000"></a>
-          <figcaption>
-            chandellor of glowing letters
-          </figcaption><a href="../lab1/index.html">home</a>
-        </figure>
+        <div class="smallThumbnails">
+          <a href="./shortened-image-name.html">
+            <img src="./img/test1.png" style="width:150px;height:150px;" alt="mexican-masks150">
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="smallThumbnails">
+          <a href="./shortened-image-name.html">
+            <img src="./img/test1.png" style="width:150px;height:150px;" alt="mexican-masks150">
+          </a>
+        </div>
+      </li>
+
+
+      <li>
+        <div class="smallThumbnails">
+          <a href="./shortened-image-name.html">
+            <img src="./img/test1.png" style="width:150px;height:150px;" alt="mexican-masks150">
+          </a>
+        </div>
+      </li>
+
+      <li>
+        <div class="smallThumbnails">
+          <a href="./shortened-image-name.html">
+            <img src="./img/test1.png" style="width:150px;height:150px;" alt="mexican-masks150">
+          </a>
+        </div>
       </li>
     </ul>
-  </nav>
+
+  </div>
+
+  <script>
+
+    var url_string = window.location.href; 
+    var url = new URL(url_string);
+    var pageTitleValue = url.searchParams.get("pageTitle");
+
+    document.getElementById("pageTitle").innerHTML = pageTitleValue;
+    document.getElementById("mainImage").src = "./img/"+pageTitleValue+"1000.jpg"
+
+  </script>
+
 </body>
+
 </html>
